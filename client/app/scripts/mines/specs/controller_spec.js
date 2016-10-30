@@ -22,20 +22,17 @@ describe('Controller: minesweeper', function () {
 
    describe('reglas del juego', function (){
     it('crear matriz con dos minas', function(){
-
       var matriz = [['*','',''],['','',''],['','*','']];
       expect(scope.crearMatriz).toEqual(matriz);
     });
 
      it('seleccionar celda 2,2 y dar el valor de 1', function(){
-       
         var mina=scope.seleccionarCelda(2,2);
         expect(mina).toBe(1);
     });
 
      it('seleccionar celda 1,1 y dar el valor de 2', function(){
-       
-        var mina=scope.seleccionarCelda(1,1);
+        var mina=scope.seleccionarCelda(1,0);
         expect(mina).toBe(2);
     });
 
@@ -43,6 +40,11 @@ describe('Controller: minesweeper', function () {
        
         var mina=scope.seleccionarCelda(0,2);
         expect(mina).toBe(0);
+    });
+
+    it('seleccionar celda 1,0 y dar el valor de 2', function(){
+        var mina=scope.seleccionarCelda(1,0);
+        expect(mina).toBe(2);
     });
 
 

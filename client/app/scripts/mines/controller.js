@@ -15,16 +15,28 @@ angular.module('Minesweeper')
   	// if((fila-1)>=0 && matriz2[fila-1][columna].toEqual('*')) mina2=mina2+1;
   	// if((fila+1)<=filaMax && matriz2[fila+1][columna].toEqual('*')) mina2=mina2+1;
   	
-  	if((columna-1)>=0 && matriz2[fila][columna-1]==='*'){
-  	  acumuladorMina=acumuladorMina+1;
-  	 }
-  	 console.log(acumuladorMina);
+  	if((columna-1)>=0 && matriz2[fila][columna-1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+  	if((columna+1)<=columMax && matriz2[fila][columna+1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+  	if((fila+1)<=filaMax && matriz2[fila+1][columna]==='*') 
+  		{acumuladorMina=acumuladorMina+1;}
+  	if((fila-1)>=0 && matriz2[fila-1][columna]==='*') 
+  		{acumuladorMina=acumuladorMina+1;}
 
-  	if((fila+1)<=filaMax && matriz2[fila+1][columna]==='*')  acumuladorMina=acumuladorMina+1;
-  	console.log(acumuladorMina);
-  	if((fila-1)>=0 && (columna-1)>=0 && matriz2[fila-1][columna-1]==='*')  acumuladorMina=acumuladorMina+1;
-  	console.log(acumuladorMina);
+  	//vertices arriba
 
+  	if((fila-1)>=0 && (columna-1)>=0 && matriz2[fila-1][columna-1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+  	if((fila-1)<=0 && (columna+1)<=columMax && matriz2[fila-1][columna+1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+  	//vertices abajo
+  	if((fila+1)<=filaMax && (columna-1)>=0 && matriz2[fila+1][columna-1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+  	if((fila+1)<=filaMax && (columna+1)<=columMax && matriz2[fila+1][columna+1]==='*')
+  		{acumuladorMina=acumuladorMina+1;}
+
+  		console.log(acumuladorMina);
 
   	// if((columna+1)>=0 && matriz2[columna+1][fila].toEqual('*')) mina2=mina2+1; 
  

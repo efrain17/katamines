@@ -1,19 +1,26 @@
 <!doctype html>
-  <head>
+  <head >
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Kata - Cuestionarix - Idukay</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="controlTablero.js"></script>
-     <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+
 
   </head>
   <body ng-app="App" ontouchstart="" onmouseover="" onload="cargarTablero();" >
   <!-- onload="cargarTablero();" -->
-    <h1>General App</h1>
+  <header>
+      <a href="index.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Game_(rapper)_Logo.png" alt="" height="30"
+        >
+      </a>
+  </header>
+    <h1 class="titulo">Busca Minas</h1>
     <div ng-controller="Main">
       
       <div ng-view ng-cloak></div>

@@ -3,7 +3,8 @@
  var columMax=2;
 
 function crearTablero(){
-	// var div = document.getElementById("tablero");
+
+	 document.getElementById("tablerominas").style.width=''+parseInt((columMax+1)*52)+'px';
 	// div.style.height = 300px;
 				for(var f = 0; f < 3; f++){
 			        for(var c = 0; c <3 ;c++){			           

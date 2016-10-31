@@ -32,19 +32,24 @@ describe('Controller: minesweeper', function () {
     });
 
      it('seleccionar celda 1,1 y dar el valor de 2', function(){
-        var mina=scope.seleccionarCelda(1,0);
+        var mina=scope.seleccionarCelda(1,1);
         expect(mina).toBe(2);
     });
 
     it('seleccionar celda 0,2 y dar el valor de 0', function(){
        
         var mina=scope.seleccionarCelda(0,2);
-        expect(mina).toBe(0);
+        expect(mina).toBe(5);
     });
 
     it('seleccionar celda 1,0 y dar el valor de 2', function(){
         var mina=scope.seleccionarCelda(1,0);
         expect(mina).toBe(2);
+    });
+
+     it('seleccionar celda 0,0 y dar el valor de Game Over', function(){
+        var mina=scope.seleccionarCelda(0,0);
+        expect(mina).toBe('Game Over');
     });
 
 

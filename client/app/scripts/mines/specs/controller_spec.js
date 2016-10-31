@@ -39,7 +39,7 @@ describe('Controller: minesweeper', function () {
     it('seleccionar celda 0,2 y dar el valor de 0', function(){
        
         var mina=scope.seleccionarCelda(0,2);
-        expect(mina).toBe(5);
+        expect(mina).toBe(0);
     });
 
     it('seleccionar celda 1,0 y dar el valor de 2', function(){

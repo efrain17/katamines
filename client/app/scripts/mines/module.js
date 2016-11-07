@@ -1,5 +1,7 @@
 'use strict';
+(function () {
 
-angular.module('Minesweeper', [
-  'ngRoute'
-]);
+  var app = angular.module('Minesweeper', [
+  	'ngRoute']);
+
+})();

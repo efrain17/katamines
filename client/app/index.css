@@ -15,6 +15,9 @@
 		font-size: 30;	
 		text-align: center;
 			}
+.menu-disabled-true {
+    color: white;
+    }
 header {
 		background: #2c2f33;
 	    height: 50px;

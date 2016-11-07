@@ -27,11 +27,15 @@ module.exports = function (grunt) {
       }
     },
     connect: {
-      options: {
+      server: {
+       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost'
-      },
+        hostname: 'localhost',
+        keepalive:true,
+        base:'app'
+              }     
+                },
       test: {
         options: {
           middleware: function (connect) {
@@ -86,4 +90,5 @@ module.exports = function (grunt) {
     'jshint',
     'test'
   ]);
+  grunt.loadNpmTasks('grunt-contrib-connect');
 };
